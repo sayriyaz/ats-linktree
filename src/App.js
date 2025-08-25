@@ -26,9 +26,9 @@ export default function AlwahaaPoolsLinktree() {
 
   // Public asset paths
   const PUBLIC_BASE = (process.env.PUBLIC_URL || "").replace(/\/$/, "");
-  const LOGO_PUBLIC_PATH = `${PUBLIC_BASE}/logo.png`;
-  const WAVES_PUBLIC_PATH = `${PUBLIC_BASE}/waves.mp3`; // Place waves.mp3 in public/
-
+  // Public assets live in /public. Relative paths work on localhost and GitHub Pages subpaths.
+  const LOGO_PUBLIC_PATH = 'logo.png';       // public/logo.png
+  const WAVES_PUBLIC_PATH = 'waves.mp3';     // public/waves.mp3
   const fallbackLogoDataUri = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`
     <svg xmlns='http://www.w3.org/2000/svg' width='256' height='256' viewBox='0 0 256 256'>
       <rect width='256' height='256' fill='white'/>
@@ -371,7 +371,11 @@ export default function AlwahaaPoolsLinktree() {
         {muted ? "Tap anywhere or press a key to enable wave sound" : ""}
       </div>
 
-      <audio ref={audioRef} loop preload="auto" playsInline muted>
+      <audio ref={audioRef} 
+      loop 
+      preload="auto" playsInline
+      onCanPlay={() => { if (!muted) audioRef.current?.play().catch(() => {}); }}
+      >
         <source src={WAVES_PUBLIC_PATH} type="audio/mpeg" />
       </audio>
 
