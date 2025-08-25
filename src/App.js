@@ -216,7 +216,7 @@ const LOGO_PUBLIC_PATH = `${(process.env.PUBLIC_URL || '').replace(/\/$/, '')}/l
       </div>
 
       <audio ref={audioRef} loop preload="auto" playsInline muted>
-        <source src="https://cdn.pixabay.com/audio/2022/03/09/audio_0b4e0d92dd.mp3" type="audio/mpeg" />
+        <source src="https://pixabay.com/sound-effects/ocean-waves-376898/" type="audio/mpeg" />
       </audio>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10">
