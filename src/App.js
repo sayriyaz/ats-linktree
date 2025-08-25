@@ -27,8 +27,8 @@ export default function AlwahaaPoolsLinktree() {
   // Public asset paths
   const PUBLIC_BASE = (process.env.PUBLIC_URL || "").replace(/\/$/, "");
   // Public assets live in /public. Relative paths work on localhost and GitHub Pages subpaths.
-  const LOGO_PUBLIC_PATH = 'logo.png';       // public/logo.png
-  const WAVES_PUBLIC_PATH = 'waves.mp3';     // public/waves.mp3
+  const WAVES_PUBLIC_PATH = `${process.env.PUBLIC_URL}/waves.mp3`;
+  const LOGO_PUBLIC_PATH  = `${process.env.PUBLIC_URL}/logo.png`;
   const fallbackLogoDataUri = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`
     <svg xmlns='http://www.w3.org/2000/svg' width='256' height='256' viewBox='0 0 256 256'>
       <rect width='256' height='256' fill='white'/>
