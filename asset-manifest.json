@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ats-linktree/static/css/main.e6c13ad2.css",
+    "main.js": "/ats-linktree/static/js/main.893fe6f9.js",
+    "static/js/453.c249aa11.chunk.js": "/ats-linktree/static/js/453.c249aa11.chunk.js",
+    "index.html": "/ats-linktree/index.html",
+    "main.e6c13ad2.css.map": "/ats-linktree/static/css/main.e6c13ad2.css.map",
+    "main.893fe6f9.js.map": "/ats-linktree/static/js/main.893fe6f9.js.map",
+    "453.c249aa11.chunk.js.map": "/ats-linktree/static/js/453.c249aa11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.893fe6f9.js"
+  ]
+}
