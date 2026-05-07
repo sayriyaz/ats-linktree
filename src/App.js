@@ -44,21 +44,8 @@ export default function AlwahaaPoolsLinktree() {
   }, []);
 
   useEffect(() => {
-    const head = document.head;
-    const updateLink = (rel) => {
-      let l = head.querySelector(`link[rel="${rel}"]`);
-      if (!l) {
-        l = document.createElement("link");
-        l.rel = rel;
-        head.appendChild(l);
-      }
-      l.type = "image/png";
-      l.href = logoSrc;
-    };
-    updateLink("icon");
-    updateLink("apple-touch-icon");
     document.title = "Alwahaa Technical Services LLC";
-  }, [logoSrc]);
+  }, []);
 
   useEffect(() => {
     fetch("https://api.ipify.org?format=json")
